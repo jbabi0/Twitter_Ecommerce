@@ -3,6 +3,41 @@ body{
   margin: 0px;
 }
 
+.extra-top-margin {
+margin-top: 100px;
+}
+
+.header-img {
+  margin-top: 50px;
+  width: 100%;
+  height: 250px;
+}
+
+.card {
+  padding: 15px;
+  margin-top: 75px;
+}
+.card-img {
+  width: 100%;
+  margin: 25px auto;
+}
+.card-title {
+  font-size: 125%;
+  font-weight: bold;
+}
+.card-subtitle {
+  font-size: 85%;
+  font-style: italic;
+}
+.btn-primary {
+  width: 80%;
+  display: block;
+  margin: 15px auto;
+  background-color: #343a40!important;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
 footer {
   margin-top: 100px;
   padding: 25px;
