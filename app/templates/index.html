@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+<!-- super block title to include whatever base.html has written -->
+{% block title %}
+  Home Page - {{super () }}
+  {% endblock %}
+
+  <!-- put content for this page into app_content block, not content block, as to not overwrite footer -->
+  {% block app_content %}
+    <h1>Home</h1>
+    {% endblock %}
