@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Post Page - {{ super() }}
+{% endblock %}
+
+{% block app_content %}
+  <div class="container">
+    <div class="row">
+      {% for k, v in people.items() %}
+              {% if v.name == name %}
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img-top">
+                      <img class="card-img" src="http://placehold.it/250x250" alt="Profile Pic">
+                    </div>
+                    <div class="card-title">{{ v.name }}</div>
+                    <div class="card-subtitle">{{ v.age }}</div>
+                    <div class="card-text">{{ v.bio }}</div>
+                    <button class="btn btn-primary">Follow</button>
+                  </div> <!-- ends card -->
+                </div> <!-- ends col 4 -->
+              {% endif %}
+            {% endfor %}
+
+
+
+      <div class="col-md-7 offset-md-1">
+        {% for k, v in posts.items() %}
+        {% if v.name == name %}
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-subtitle">{{ v. name }}</div>
+              <div class="card-subtitle">{{ v.date }}</div>
+              <div class="card-title">{{ v.tweet }}</div>
+              <button class="btn btn-primary btn-like">Like</button>
+            </div> <!--ends card-->
+          </div> <!--ends col 12-->
+        </div> <!-- ends row for card -->
+        {% endif %}
+        {% endfor %}
+      </div>
+      <!-- end col 7 -->
+    </div> <!-- end row -->
+  </div> <!--end container -->
+  {% endblock %}
