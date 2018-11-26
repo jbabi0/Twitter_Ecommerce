@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %}
+  Login Page - {{ super() }}
+{% endblock %}
+
+{% block app_content %}
+  <div class="container">
+    <div class="row extra-top-margin">
+      <div class="col-md-12">
+        <h1>Login</h1>
+      </div>
+    </div> <!-- end row -->
+
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        {{ wtf.quick_form(form) }}
+      </div>
+    </div>
+  </div> <!--end container -->
+  {% endblock %}
